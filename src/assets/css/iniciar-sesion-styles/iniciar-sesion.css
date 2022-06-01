@@ -1,0 +1,301 @@
+/* ------------------CSS del menu despegable--------------- */
+.menu_item{
+  list-style: none;
+  position: relative;
+ z-index: 100;
+  margin: 0 5px;
+  /* --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  --clip:   polygon(0 0, 100% 0, 100% 0, 0 0);
+
+  
+}
+.menu_item:hover{
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+
+}
+/* sub meno contenedor */
+.menu{
+  clip-path: var(--clip);
+  list-style: none;
+  transition: clip-path .3s;
+position: absolute;
+ margin: auto;
+  width: max-content;
+  
+  background-color: var(--black);
+  border: 2px solid wheat;
+  
+}
+
+/* enlaces del menu contenedor */
+.dropdown-item{
+  color: var(--grey);
+}
+
+.dropdown-item:hover{
+  color: var(--white);
+  background-color: var(--black);
+}
+
+
+
+
+/* ---------------Termina el CSS del menú despegable */
+.titulo {  /*Caracteristicas de los titulos*/
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 25px;
+}
+
+
+
+.formulario_label {  /*Caracteristicas de las etiquetas*/
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 23px;
+  margin-right: 75px;
+  
+}
+
+
+.formulario_boton {  /*Caracteristicas de los botones */
+  background-color: #D6D6E3;
+  border-radius: 45px;
+  border: 3px solid white;
+  color: var(black);
+  font-family: var(--body);
+  font-size: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: .1s ease all;
+}
+
+.formulario_boton:hover{
+  box-shadow: 3px 0px 30px var(--blue);
+}
+
+.formulario_input-exito{
+  font-size: 14px;
+  color: #E4F802;
+  display: none;
+}
+
+
+.formulario_input {  /*Caracteristicas de los espacios para escribir*/
+  background: #1212ff4f;
+  border: 3px solid rgb(18, 18, 255);
+  border-radius: 45px;
+  width: 342px;
+  height: 35px;
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 15px;
+  cursor:pointer;
+  transition: .3s ease all;
+  
+}
+
+
+.formulario_input:focus {
+
+  border: 3px solid  #ffff;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+  
+  
+}
+
+.formulario_input-error{
+  font-size: 15px;
+  display: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  font-family: var(--body);
+  
+  
+  }
+  
+
+.formulario_input-error-activo{
+  display: block;
+
+}
+
+
+
+
+.formulario_mensaje{
+  font-family:var(--body) ;
+  height: 45px;
+  line-height: 45px;
+  width: 150px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  display: none;
+  
+  
+
+}
+.formulario-iniciar{
+  border-radius: 45px;
+  border: 5px solid #D6D6E3;
+  width: 700px;
+  height: 600px;
+  margin-bottom: 200px;  
+}
+
+.formulario_registrate{
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 20px;
+  text-align: center;
+  
+}
+.texto-registro
+.formulario_input-exito-activo{
+  display: block;
+
+}
+
+.formulario_mensaje{
+  font-family:var(--body) ;
+  height: 45px;
+  width: 800px;
+  line-height: 45px;
+  text-align: center;
+  background-color: var(--blue);
+  color: white;
+  display: none;
+  
+  
+
+}
+
+
+/*¨--------------------------------Formularios para validacion--------------------------------------*/
+.formulario_validacion-estado{
+  position: relative;
+  right: 40px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+
+.formulario_mensaje-activo{
+  display: block;
+}
+
+.formulario_grupo-correcto .formulario_validacion-estado { /*validacoion para el capo iniciar sesion*/
+
+  color: #46FF01;
+  opacity: 1;
+  
+
+}
+.formulario_grupo-correcto .formulario_label{ /*validacoion para el capo iniciar sesion*/
+  
+  color: #46FF01;
+  opacity: 1;
+  
+
+}
+
+.formulario_grupo-correcto .formulario_input{
+  border: 3px solid  #46FF01;
+}
+
+
+.formulario_grupo-incorrecto .formulario_label{
+
+  color: #FF0D00;
+}
+
+.formulario_grupo-incorrecto .formulario_input{
+
+  border: 3px solid  #FF0D00;
+}
+
+.formulario_grupo-incorrecto .formulario_validacion-estado{/*validacoion para el capo iniciar sesion*/
+
+  color: #FF0D00;
+  opacity: 1;
+}
+
+
+
+@media (max-width: 990px) {  /*Cuando el ancho de la pagina sea maximo de 780 pixeles los formularios crecen en altura*/
+
+  .formulario-iniciar{
+    
+    height: 650px;
+     
+  }
+
+  
+
+
+.formulario_label {
+
+  text-align: center; /* las etique al cambiar la pantalla se centran*/
+  font-size: 25px;
+  margin-left: 20px;
+
+}
+
+
+
+.formulario_input {
+
+  text-align: center; /* El texto se empieza a escribi desde el centro  al cambiar la pantalla */
+  margin-left: 20px;
+
+}
+
+.formulario_mensaje{
+
+  width: 500px;
+  font-size: 12px;
+  
+  
+
+}
+
+
+
+.formulario_input-error{
+  text-align: center;
+  font-size: 12px;
+
+}
+ /* Contenedor del sub menú */
+ .menu{
+  background-color: var(--black) !important; 
+  position: absolute; 
+  display: block; 
+  
+ width: 100%; 
+  transform: translate(0);
+} 
+/* Links del submneú */
+.dropdown-item{
+ border-top: 1px solid var(--white);
+ border-bottom: 1px solid var(--white);
+}
+.dropdown-item:hover{
+ background-color: var(--blue) !important;
+ 
+}
+@media (max-width: 413px) {
+
+  .formulario_input {
+    width : 300px 
+    
+  }
+  
+}
+
+}

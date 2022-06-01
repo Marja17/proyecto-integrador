@@ -1,0 +1,21 @@
+$btnEditarUsuario.addEventListener('click', (e) =>{ //Funcion del boton editar usuario, al dar click los inputs y boton guardar se habilitan, mientras que el boton editar usuario se inhabilita.
+    $inputNombre.removeAttribute('disabled');
+    $inputApellido.removeAttribute('disabled');
+ //   $inputCorreo.removeAttribute('disabled');
+    $inputTelefono.removeAttribute('disabled');
+    $inputDireccion.removeAttribute('disabled');
+    $inputFoto.removeAttribute('disabled');
+    $inputTarjeta.removeAttribute('disabled');
+    $inputVencimiento.removeAttribute('disabled');
+    $inputCVV.removeAttribute('disabled');
+    $inputCBX.removeAttribute('disabled');
+    $archivo.removeAttribute('disabled');
+    $btnGuardarUsuario.removeAttribute('disabled');
+    $btnGuardarUsuario.style.opacity = "1.0";
+    e.target.style.opacity = "0.2";
+    e.target.setAttribute('disabled',true);
+    $btnEditarVendedor.removeAttribute('disabled');
+    $btnEditarVendedor.style.opacity = "1.0";
+    $btnAgregarVendedor.style.opacity ="0.2";
+    $btnAgregarVendedor.setAttribute('disabled',true);
+});
